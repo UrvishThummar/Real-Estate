@@ -1,0 +1,7 @@
+Please add the following images to this directory:
+1. property-1.jpg - Modern apartment image
+2. property-2.jpg - Luxury villa image
+3. property-3.jpg - Family house image
+4. hero-bg.jpg - Hero section background image
+ 
+You can use any high-quality real estate images that match these descriptions. 

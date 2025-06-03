@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties - Realar Real Estate</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/properties.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/output-onlinepngtools.png">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo-white.svg" alt="Realar Logo">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="properties.html" class="active">Properties</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Signup</a>
+                    <a href="favorites.html" class="favorite-nav-link">
+                        <i class="far fa-heart"></i>
+                        <span class="favorite-count">0</span>
+                    </a>
+                    <a href="scheduled-viewings.html" class="scheduled-viewings-nav-link" title="Scheduled Viewings">
+                        <i class="fas fa-calendar-check"></i>
+                    </a>
+                    <div class="profile-dropdown">
+                        <a href="#" class="profile-nav-link">
+                            <i class="far fa-user"></i>
+                        </a>
+                        <div class="profile-dropdown-content">
+                            <!-- <a href="profile.html"><i class="fas fa-user"></i>My Profile</a>
+                            <a href="settings.html"><i class="fas fa-cog"></i>Settings</a>
+                            <a href="my-properties.html"><i class="fas fa-home"></i>My Properties</a>
+                            <a href="saved-searches.html"><i class="fas fa-search"></i>Saved Searches</a>
+                            <a href="scheduled-viewings.html"><i class="fas fa-calendar-check"></i>Scheduled Viewings</a> -->
+                            <a href="#" class="logout-link"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                        </div>
+                    </div>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Properties Hero Section -->
+    <section class="properties-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Discover Your Dream Property</h1>
+                <p class="fade-in-delay">Browse through our exclusive collection of premium properties</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Grid Section -->
+    <section class="properties-grid">
+        <div class="container">
+            <div class="grid-header">
+                <div class="results-count">
+                    Showing <span id="resultsCount">0</span> Properties
+                </div>
+                <div class="view-options">
+                    <button class="view-btn grid-view active" title="Grid View">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                    <button class="view-btn list-view" title="List View">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-container" id="propertiesContainer">
+                <!-- Property cards will be dynamically added here -->
+            </div>
+            <div class="loading-state" id="loadingState">
+                <div class="spinner"></div>
+                <p>Loading properties...</p>
+            </div>
+            <div class="empty-state" id="emptyState">
+                <i class="fas fa-search"></i>
+                <h3>No Properties Found</h3>
+                <p>Try adjusting your search criteria or filters</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Modal -->
+    <div class="property-modal" id="propertyModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="property-gallery">
+                    <div class="main-image">
+                        <img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg" alt="Property">
+                        <button class="gallery-nav prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-nav next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="thumbnail-strip">
+                        <img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg" alt="Thumbnail 1" class="active">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="Thumbnail 2">
+                        <img src="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg" alt="Thumbnail 3">
+                        <img src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg" alt="Thumbnail 4">
+                    </div>
+                </div>
+                <div class="property-details">
+                    <div class="detail-header">
+                        <div class="price-status">
+                            <span class="status">For Sale</span>
+                            <h2 class="price">$2,500,000</h2>
+                        </div>
+                        <button class="favorite-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <h1 class="title">Luxury Apartment with Ocean View</h1>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        123 Ocean Drive, Miami Beach
+                    </p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-bed"></i>
+                            <span>3 Bedrooms</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-bath"></i>
+                            <span>2 Bathrooms</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>2,100 sqft</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-car"></i>
+                            <span>2 Parking</span>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Description</h3>
+                        <p>Luxurious oceanfront apartment featuring breathtaking views, modern amenities, and premium finishes. This stunning property offers an open-concept living space, gourmet kitchen, and expansive balcony perfect for entertaining.</p>
+                    </div>
+                    <div class="amenities">
+                        <h3>Amenities</h3>
+                        <ul class="amenities-list">
+                            <li><i class="fas fa-swimming-pool"></i> Swimming Pool</li>
+                            <li><i class="fas fa-dumbbell"></i> Fitness Center</li>
+                            <li><i class="fas fa-concierge-bell"></i> Concierge</li>
+                            <li><i class="fas fa-shield-alt"></i> 24/7 Security</li>
+                            <li><i class="fas fa-spa"></i> Spa</li>
+                            <li><i class="fas fa-wifi"></i> High-Speed Internet</li>
+                        </ul>
+                    </div>
+                    <div class="agent-info">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith">
+                        <div class="agent-details">
+                            <h3>Listed by John Smith</h3>
+                            <p>Real Estate Agent</p>
+                            <div class="agent-contact">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-phone"></i> Call Agent
+                                </button>
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-envelope"></i> Email Agent
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Company Info -->
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <img src="images/logo-white.svg" alt="Realar Logo">
+                        </div>
+                        <p class="company-desc">
+                            We are a real estate firm with over 20 years of expertise, providing amazing locations to our partners and clients.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-col">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="properties.html">Properties</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="footer-col">
+                        <h3>Services</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Property Management</a></li>
+                            <li><a href="#">Rental Services</a></li>
+                            <li><a href="#">Property Valuation</a></li>
+                            <li><a href="#">Investment Strategy</a></li>
+                            <li><a href="#">Real Estate Consulting</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="footer-col">
+                        <h3>Contact Info</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Business Avenue<br>Ahmedabad, Gujarat 380015, India</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+91 79 1234 5678</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>contact@realar.in</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="footer-col">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                        <form class="newsletter-form">
+                            <div class="form-group">
+                                <input type="email" placeholder="Enter your email">
+                                <button type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Realar. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/properties.js"></script>
+</body>
+</html> 

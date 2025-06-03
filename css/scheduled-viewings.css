@@ -1,0 +1,218 @@
+/* Scheduled Viewings Page Styles */
+
+.scheduled-viewings-section {
+    padding: 100px 0 60px 0;
+    background: #f8f9fa;
+    min-height: 80vh;
+}
+
+.scheduled-viewings-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.scheduled-viewings-section .section-title i {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+}
+
+.scheduled-viewings-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 32px;
+    margin-top: 20px;
+}
+
+.scheduled-viewing-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(26, 35, 50, 0.08);
+    padding: 32px 28px 24px 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 24px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    border: 1px solid #eee;
+}
+
+.scheduled-viewing-card:hover {
+    box-shadow: 0 8px 32px rgba(225, 177, 104, 0.13);
+    transform: translateY(-4px) scale(1.01);
+}
+
+.scheduled-viewing-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.scheduled-viewing-header i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.scheduled-viewing-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.scheduled-viewing-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 32px;
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.scheduled-viewing-details span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.scheduled-viewing-details i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.scheduled-viewing-notes {
+    background: #f6f2e7;
+    border-left: 4px solid var(--primary-color);
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: #7a6a3a;
+    font-size: 0.98rem;
+    margin-top: 8px;
+}
+
+.no-scheduled-viewings {
+    text-align: center;
+    padding: 60px 0 40px 0;
+    color: #bbb;
+}
+
+.no-scheduled-viewings i {
+    font-size: 3rem;
+    color: #e1b168;
+    margin-bottom: 18px;
+}
+
+.no-scheduled-viewings h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.no-scheduled-viewings p {
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+
+.no-scheduled-viewings a.btn {
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 28px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.no-scheduled-viewings a.btn:hover {
+    background: var(--primary-dark);
+}
+
+.scheduled-viewing-timer {
+    margin-top: 8px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #2d7a2d;
+    background: #eafbe7;
+    padding: 6px 14px;
+    border-radius: 6px;
+    display: inline-block;
+    width: fit-content;
+    transition: color 0.3s, background 0.3s;
+}
+.scheduled-viewing-timer.expired {
+    color: #b23b3b;
+    background: #fbeaea;
+}
+
+.remove-viewing-btn {
+    margin-top: 14px;
+    background: #fff0e0;
+    color: #d35400;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(225, 177, 104, 0.08);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.remove-viewing-btn i {
+    font-size: 1.1rem;
+}
+.remove-viewing-btn:hover {
+    background: #ffd6b0;
+    color: #b23b3b;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.scheduled-viewing-image {
+    flex: 0 0 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scheduled-viewing-image img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(26, 35, 50, 0.08);
+    background: #f3f3f3;
+}
+.scheduled-viewing-content {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .scheduled-viewings-section {
+        padding: 60px 0 30px 0;
+    }
+    .scheduled-viewings-list {
+        gap: 18px;
+    }
+    .scheduled-viewing-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .scheduled-viewing-image img {
+        width: 100%;
+        height: 180px;
+        border-radius: 10px;
+    }
+    .scheduled-viewings-section .section-title {
+        font-size: 1.5rem;
+        gap: 8px;
+    }
+} 

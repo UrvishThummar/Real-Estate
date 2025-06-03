@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - Real Estate Insights</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/output-onlinepngtools.png">
+</head>
+<body class="page-transition">
+    <!-- Header Section -->
+    <header class="main-header animate-fade-down">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo animate-fade-right">
+                    <a href="index.html">
+                        <img src="images/logo-white.svg" alt="Logo">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li class="animate-fade-down delay-100"><a href="index.html">Home</a></li>
+                    <li class="animate-fade-down delay-200"><a href="about.html">About</a></li>
+                    <li class="animate-fade-down delay-300"><a href="properties.html">Properties</a></li>
+                    <li class="animate-fade-down delay-400"><a href="blog.html" class="active">Blog</a></li>
+                    <li class="animate-fade-down delay-500"><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-buttons animate-fade-left">
+                    <a href="login.html" class="btn btn-outline hover-scale">Login</a>
+                    <a href="signup.html" class="btn btn-primary hover-scale">Signup</a>
+                    <a href="favorites.html" class="favorite-nav-link hover-scale">
+                        <i class="far fa-heart"></i>
+                        <span class="favorite-count">0</span>
+                    </a>
+                    <a href="scheduled-viewings.html" class="scheduled-viewings-nav-link" title="Scheduled Viewings">
+                        <i class="fas fa-calendar-check"></i>
+                    </a>
+                    <div class="profile-dropdown">
+                        <a href="#" class="profile-nav-link">
+                            <i class="far fa-user"></i>
+                        </a>
+                        <div class="profile-dropdown-content">
+                            <!-- <a href="profile.html"><i class="fas fa-user"></i>My Profile</a>
+                            <a href="settings.html"><i class="fas fa-cog"></i>Settings</a>
+                            <a href="my-properties.html"><i class="fas fa-home"></i>My Properties</a>
+                            <a href="saved-searches.html"><i class="fas fa-search"></i>Saved Searches</a>
+                            <a href="scheduled-viewings.html"><i class="fas fa-calendar-check"></i>Scheduled Viewings</a> -->
+                            <a href="#" class="logout-link"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                        </div>
+                    </div>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Detail Content -->
+    <section class="blog-detail">
+        <div class="container">
+            <article class="blog-post-detail animate-scale">
+                <div class="post-header">
+                    <div class="post-category animate-fade-up" id="postCategory"></div>
+                    <h1 class="animate-fade-up delay-100" id="postTitle"></h1>
+                    <div class="post-meta animate-fade-up delay-200">
+                        <span id="postDate"></span>
+                        <span id="postReadTime"></span>
+                    </div>
+                </div>
+                <div class="post-image animate-fade-up delay-300">
+                    <img id="postImage" src="" alt="">
+                </div>
+                <div class="post-content animate-fade-up delay-400" id="postContent">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <script src="js/blog-detail.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,291 @@
+/* Large Desktop Styles */
+@media screen and (max-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .slide-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .slide-content h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Desktop Styles */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .nav-links {
+        gap: 24px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero-slider {
+        height: 80vh;
+    }
+
+    .slide-content {
+        margin-left: 5%;
+    }
+
+    .slide-content h1 {
+        font-size: 3rem;
+    }
+
+    .slide-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-header {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-images {
+        grid-template-columns: 1fr;
+    }
+
+    .project-slide {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .project-gallery {
+        order: -1;
+    }
+}
+
+/* Small Tablet Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .header {
+        padding: 15px 0;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .logo img {
+        height: 28px;
+    }
+
+    .logo span {
+        font-size: 18px;
+    }
+
+    .logo small {
+        font-size: 10px;
+    }
+
+    .nav-right {
+        gap: 16px;
+    }
+
+    .add-listing-btn {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 15px);
+        left: 0;
+        width: 100%;
+        background-color: #1C2434;
+        padding: 16px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-links a {
+        padding: 12px 0;
+        width: 100%;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .hero-slider {
+        height: 70vh;
+    }
+
+    .slide-content {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .slide-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .slide-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .slider-controls {
+        bottom: 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-item {
+        padding: 20px;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .logo {
+        min-width: auto;
+    }
+
+    .logo img {
+        height: 24px;
+    }
+
+    .logo span {
+        font-size: 16px;
+    }
+
+    .logo small {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .nav-links {
+        padding: 12px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    .hero-slider {
+        height: 60vh;
+    }
+
+    .slide-content h1 {
+        font-size: 2rem;
+    }
+
+    .slide-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .services-title {
+        font-size: 1.5rem;
+    }
+
+    .project-number {
+        font-size: 4rem;
+    }
+}
+
+/* Extra Small Mobile Styles */
+@media screen and (max-width: 375px) {
+    .logo span {
+        font-size: 14px;
+    }
+
+    .logo small {
+        font-size: 8px;
+    }
+
+    .slide-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .slide-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .prev-slide, .next-slide {
+        width: 40px;
+        height: 40px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+} 
