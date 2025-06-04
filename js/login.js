@@ -8,7 +8,7 @@ function validateLoginForm() {
     const errorMessages = form.querySelectorAll('.error-message');
 
     // Clear previous error messages
-    errorMessages.forEach(msg => msg.textContent = '');
+    errorMessages.forEach(msg => msg.remove());
 
     let isValid = true;
 
@@ -35,10 +35,14 @@ function validateLoginForm() {
 
 // Show error message
 function showError(input, message) {
-    const errorElement = input.nextElementSibling;
-    if (errorElement && errorElement.classList.contains('error-message')) {
-        errorElement.textContent = message;
-    }
+    const errorElement = document.createElement('div');
+    errorElement.className = 'error-message';
+    errorElement.textContent = message;
+    errorElement.style.color = '#ff4444';
+    errorElement.style.fontSize = '0.9rem';
+    errorElement.style.marginTop = '5px';
+    input.parentElement.appendChild(errorElement);
+    input.classList.add('error');
 }
 
 // Email validation helper
@@ -65,12 +69,6 @@ function login(email, password) {
         
         localStorage.setItem('isAuthenticated', 'true');
         
-        // Hide login button and show user icon
-        const loginBtn = document.querySelector('.login-btn');
-        const userIcon = document.querySelector('.user-icon');
-        if (loginBtn) loginBtn.classList.add('hidden');
-        if (userIcon) userIcon.classList.add('visible');
-        
         // Show success message
         const form = document.querySelector('.login-form');
         const successMessage = document.createElement('div');
@@ -88,6 +86,9 @@ function login(email, password) {
         const errorMessage = document.createElement('div');
         errorMessage.className = 'error-message';
         errorMessage.textContent = 'Invalid email or password';
+        errorMessage.style.color = '#ff4444';
+        errorMessage.style.textAlign = 'center';
+        errorMessage.style.marginBottom = '15px';
         form.insertBefore(errorMessage, form.firstChild);
     }
 }
